@@ -1,0 +1,15 @@
+<template>
+
+  <lightning-card variant="Narrow" title="Account" icon-name="standard:account">
+    <p class="slds-p-horizontal_small">
+      <lightning-record-form record-id={recordId} object-api-name={objectApiName} fields={fields} columns="2">
+      </lightning-record-form>
+    </p>
+    <div slot="footer">
+      <p><b>Number Of Contacts: {numberOfContacts}</b></p>
+    </div>
+  </lightning-card>
+  <c-show-contacts application-developer-contacts={applicationDeveloperContacts}
+    customer-success-contacts={customerSuccessContacts}></c-show-contacts>
+
+</template>
