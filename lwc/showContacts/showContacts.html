@@ -1,0 +1,21 @@
+<template>
+    <lightning-card variant="Narrow" title="Customer Success Contacts" icon-name="standard:contact">
+        <template if:true={customerSuccessContacts}>
+            <lightning-datatable data={customerSuccessContacts} columns={columns} key-field="Id">
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+    <lightning-card variant="Narrow" title="Application Developer Contacts" icon-name="standard:contact">
+        <template if:true={applicationDeveloperContacts}>
+            <lightning-datatable data={applicationDeveloperContacts} columns={columns} key-field="Id">
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+
+</template>
